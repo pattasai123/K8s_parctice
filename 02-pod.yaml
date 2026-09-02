@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: k8s-practice
-  label: 
+  labels: 
     - name: pod-creator
 spec:
   containers:
