@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: k8s-practice
+  label: 
+    - name: pod-creator
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx:alpine
+    ports:
+    - containerPort: 80
+  
+   
