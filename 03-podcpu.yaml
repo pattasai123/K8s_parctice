@@ -5,7 +5,7 @@ metadata:
   labels:
     name: mysql
 spec:
-  container:
+  containers:
   - name: mysql
     image: mysql:xyz
     ports:
