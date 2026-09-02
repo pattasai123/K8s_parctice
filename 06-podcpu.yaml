@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: cpu
+  namespace: namespace
+  labels:
+    name: dev
+  annotations: 
+    imagerepository: https://hub.docker.com/
+    kubernetesdocument: https://kubernetes.io/
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+    resources:
+      requests:          # Guaranteed 0.25 cores
+        cpu: "250m"
+        memory: "64Mi"
+      limits:
+        cpu: "500m"      # Strictly capped at 0.5 cores
+        memory: "128Mi"
