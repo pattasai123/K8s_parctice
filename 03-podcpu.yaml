@@ -1,13 +1,13 @@
 apiVersion: v1
-kind: Deployment
+kind: Pod
 metadata:
   name: k8s-practice
-  label:
-    - name: mysql
+  labels:
+    name: mysql
 spec:
   container:
   - name: mysql
-    image: mysql:latest
+    image: mysql:xyz
     ports:
     - containerPort: 3306
   
