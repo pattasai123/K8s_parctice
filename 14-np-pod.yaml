@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: servicepod
+  labels:
+    names: roboshop
+    env: dev
+    language: yaml
+    creator: balaji
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+    

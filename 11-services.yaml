@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service
+spec:
+  selector: 
+    names: roboshop
+    env: dev
+    language: yaml
+  ports:
+  - protocol: TCP
+    port: 80 # service port
+    targetPort: 80
+
+  
